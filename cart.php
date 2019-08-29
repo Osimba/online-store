@@ -62,7 +62,9 @@ if (isset($_POST['update']))
 
 // get items in cart
 $display = $Cart->create_cart();
-$Template->set_Data('cart_rows', $display);
+$purchase = $Cart->get();
+$Template->set_data('cart_rows', $display);
+$Template->set_data('purchase_items', $purchase);
 
 
 // get category nav

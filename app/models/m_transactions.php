@@ -5,10 +5,6 @@
     Handle all tasks related to Transactions
 
     Empties cart
-
-    $_SESSION['cart']['product_id'] = num of specified item in cart
-
-    ex: $_SESSION['cart'][1] = 1 -if adding beach toys who's id is 1
 */
 
 class Transactions
@@ -90,11 +86,11 @@ class Transactions
     } //get()
 
 
-    public function add_transaction($id, $product, $amount, $currency, $status, $created_at) {
+    public function add_transaction($id, $customer_id, $product, $amount, $currency, $status, $created_at) {
 
-        if($stmt = $this->Database->prepare("INSERT INTO transactions (id, product, amount, currency, status, created_at) VALUES (?, ?, ?, ?, ?, ?)")) {
+        if($stmt = $this->Database->prepare("INSERT INTO transactions (id, customer_id, product, amount, currency, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
 
-            $stmt->bind_param("ssdsss", $product, $amount, $currency, $status, $created_at);
+            $stmt->bind_param("sssdsss", $id, $customer_id, $product, $amount, $currency, $status, $created_at);
             $stmt->execute();
 
             return $id;
