@@ -1,0 +1,25 @@
+PROJECT ROADMAP:
+
+COMPLETED:
+
+TO DO:
+-- Set up file structure
+-- Set up database, fill with content
+-- Set up init file, add connection to the database
+-- Set up basic HTML & CSS
+-- Discuss coding style guide
+-- Discuss MVC and OOP
+-- Create the Template object
+-- Create the Categories object so we can set up the navigation
+-- Work on the Products object, so we can display a list of all products
+-- Allow products to be sorted into categories
+-- Create the products detail view
+-- Create cart object, so items can be added to the cart
+-- Build out the cart page and display products in the cart
+-- Build out ability to display # of items/cost of items in cart in the page header
+-- Add ability to remove all products in cart
+-- Add ability to remove/change number of products in cart
+-- Add tax support
+-- Add shipping cost
+-- Set up PayPal sandbox account
+-- Build support for PayPal checkout
