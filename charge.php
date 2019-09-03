@@ -2,7 +2,7 @@
 	include('app/init.php');
 	require_once('vendor/autoload.php');
 
-	\Stripe\Stripe::setApiKey('sk_test_9djIyU6PL02OsKkEj79SLmAG00vy3Eqn1K');
+	\Stripe\Stripe::setApiKey(STRIPE_DEVAPI);
 
 	// Sanitize POST Array
 	$POST = filter_var_Array($_POST, FILTER_SANITIZE_STRING);
@@ -23,7 +23,7 @@
 	// Charge Customer
 	$charge = \Stripe\Charge::create(array(
 		"amount" => $price,
-		"currency" => "usd",
+		"currency" => STRIPE_CURRENCY,
 		"description" => "Online Store Purchase",
 		"customer" => $customer->id
 	));

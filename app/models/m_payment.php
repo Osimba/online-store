@@ -3,6 +3,7 @@
 /*
     Payment Class
     Handle all tasks related to Payments through Stripe
+    NOT IN USE
 */
 
 require('vendor/autoload.php')

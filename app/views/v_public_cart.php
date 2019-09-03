@@ -37,7 +37,7 @@
 
             <?php $i++; } ?>
             <div class="submit_row">
-                <input type="submit" name="submit" class="button" value="Pay">
+                <input type="submit" name="submit" class="button" value="Pay with Stripe">
             </div>
         </form>
     <?php } ?>
