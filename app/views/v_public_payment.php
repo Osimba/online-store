@@ -27,12 +27,12 @@
 				foreach($cart_items as $cart_item) { 
 			?>
 
-		        <input type="hidden" name="<?php echo "cart[{$i}]['id']"; ?>" value="<?= $cart_item['id'] ?>">
-		        <input type="hidden" name="<?php echo "cart[{$i}]['name']"; ?>" value="<?= $cart_item['name'] ?>">
-		        <input type="hidden" name="<?php echo "cart[{$i}]['description']"; ?>" value="<?= $cart_item['description'] ?>">
-		        <input type="hidden" name="<?php echo "cart[{$i}]['price']"; ?>" value="<?= $cart_item['price'] ?>">
-		        <input type="hidden" name="<?php echo "cart[{$i}]['image']"; ?>" value="<?= $cart_item['image'] ?>">
-		        <input type="hidden" name="<?php echo "cart[{$i}]['quantity']"; ?>" value="<?= $cart_item['quantity'] ?>">
+		        <input type="hidden" name="<?php echo "cart[{$i}][id]"; ?>" value="<?= $cart_item['id'] ?>">
+		        <input type="hidden" name="<?php echo "cart[{$i}][name]"; ?>" value="<?= $cart_item['name'] ?>">
+		        <input type="hidden" name="<?php echo "cart[{$i}][description]"; ?>" value="<?= $cart_item['description'] ?>">
+		        <input type="hidden" name="<?php echo "cart[{$i}][price]"; ?>" value="<?= $cart_item['price'] ?>">
+		        <input type="hidden" name="<?php echo "cart[{$i}][image]"; ?>" value="<?= $cart_item['image'] ?>">
+		        <input type="hidden" name="<?php echo "cart[{$i}][quantity]"; ?>" value="<?= $cart_item['quantity'] ?>">
 
 		    <?php $i++; } ?>
 

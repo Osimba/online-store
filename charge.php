@@ -4,15 +4,23 @@
 
 	\Stripe\Stripe::setApiKey(STRIPE_DEVAPI);
 
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
+
 	// Sanitize POST Array
 	$POST = filter_var_Array($_POST, FILTER_SANITIZE_STRING);
 
-	$first_name = $POST['first_name'];
-	$last_name = $POST['last_name'];
+	$firstName = $POST['first_name'];
+	$lastName = $POST['last_name'];
 	$email = $POST['email'];
 	$token = $POST['stripeToken'];
 	$cart = $POST['cart'];
-	$price = $cart['price'] * 100;
+	$totalPrice = 0;
+	$itemList = [];
+
+	foreach ($cart as $item) {
+		$totalPrice += $item['price'];
+		$itemList[] = $item['name'] . " {$item['quantity']}";
+	}
 
 	// Create Customer in Stripe
 	$customer = \Stripe\Customer::create(array(
@@ -34,3 +42,4 @@
 	// Redirect to success
 	header('Location: success.php?tid=' . $charge->id . '&product=' . $charge->description);
 
+}
