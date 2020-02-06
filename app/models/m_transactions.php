@@ -86,7 +86,7 @@ class Transactions
     } //get()
 
 
-    public function add_transaction($id, $customer_id, $product, $amount, $currency, $status, $created_at) {
+    public function addTransaction($id, $customer_id, $product, $amount, $currency, $status, $created_at) {
 
         if($stmt = $this->Database->prepare("INSERT INTO transactions (id, customer_id, product, amount, currency, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
 

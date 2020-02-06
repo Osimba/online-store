@@ -13,7 +13,7 @@
 
 	<?php 
 		$cart_items = $this->get_data('purchase_items', FALSE);
-		print_r($cart_items); 
+		
 	?>
 
 

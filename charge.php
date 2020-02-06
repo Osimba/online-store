@@ -30,13 +30,13 @@
 
 	// Charge Customer
 	$charge = \Stripe\Charge::create(array(
-		"amount" => $price,
+		"amount" => $totalPrice * 100,
 		"currency" => STRIPE_CURRENCY,
 		"description" => "Online Store Purchase",
 		"customer" => $customer->id
 	));
 
-	$Transactions->addTransaction($charge->id, $customer->id, $cart['name'], $cart['price'], "usd", "Success", date("Y-m-d H:i:s"));
+	$Transactions->addTransaction($charge->id, $customer->id, "Online Store Purchase", $totalPrice * 100, "usd", "Success", date("Y-m-d H:i:s"));
 
 
 	// Redirect to success

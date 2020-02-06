@@ -7,11 +7,10 @@
 	<p>Details:</p>
 
 	<ul class="purchase-details">
-		<?php $this->get_data('cart_rows'); ?>
+		<?php $purchaseInfo; ?>
 	</ul>
 
 	<hr>
-	<p>Your transaction ID is <?php echo $tid; ?></p>
 	<p>Check your email for more info</p>
 	<p><a href="index.php">Go Back</a></p>
 </div>

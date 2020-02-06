@@ -22,7 +22,6 @@
     $items = $this->get_data('cart_total_items', FALSE);
     if ($items > 0) { 
         $cart_items = $this->get_data('purchase_items', FALSE);
-        print_r($cart_items);
         
         $i = 0;
     ?>
@@ -44,10 +43,5 @@
 
 </div>
 
-<script type="text/javascript">
-    function payForItemsInCart(cartItems) {
-        console.log(cartItems);
-    }
-</script>
 
 <?php include("includes/public_footer.php"); ?>
